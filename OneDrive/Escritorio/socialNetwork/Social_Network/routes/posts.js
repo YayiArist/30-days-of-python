@@ -52,7 +52,6 @@ router.delete("/:id", async(req, res)=>{
   }   
 })
 
-
 //like/ dislike a post
 router.put("/:id/like", async (req, res)=>{
 try{
@@ -82,13 +81,10 @@ router.get("/:id", async(req,res)=>{
   }
 })
 
-
 //get timeline posts 
-
 //Aqui no voy a usar await sino promesas porque hay que enviar varios request
 
 router.get("/timeline/all", async(req,res)=>{
-  
   try{
   const currentUser= await User.findById(req.body.userId)
   const userPosts = await Post.find({userId:currentUser._id});
@@ -102,9 +98,6 @@ router.get("/timeline/all", async(req,res)=>{
     res.status(500).json(err)
   }
 })
-
-
-
 
 
 module.exports = router;
