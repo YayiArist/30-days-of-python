@@ -35,6 +35,7 @@ print(len(firstname)==len(lastname))
 print(len("hola") >= len("persona")) #false cuenta caracteres
 print("aaaa">= "abaa") # false => ordenacion alfabetica
 
+#arithmetic operators
 
 num_one = 5
 num_two = 4
@@ -56,3 +57,8 @@ print('remainder: ', remainder)
 
 name = input( "what's your name?" ) 
 print(name)
+
+# Calculating area of a circle
+radius = 10                                 # radius of a circle
+area_of_circle = 3.14 * radius ** 2         # two * sign means exponent or power
+print('Area of a circle:', area_of_circle)
